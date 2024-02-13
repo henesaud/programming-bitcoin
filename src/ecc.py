@@ -48,7 +48,7 @@ class FieldElement:
 
 
 class Point:
-    "A point in a elyptcic curve"
+    "A point in a elliptic curve"
 
     def __init__(self, x, y, a, b):
         self.a = a
@@ -59,6 +59,7 @@ class Point:
         # Accommodates points at infinity. None indicates infinity.
         if self.x is None and self.y is None:
             return
+
         if self.y**2 != self.x**3 + a * x + b:
             raise ValueError(f"({x}, {y}) is not on the curve")
 

@@ -94,7 +94,6 @@ class Point:
             y = s * (self.x - x) - self.y
             return self.__class__(x, y, self.a, self.b)
 
-        # Point1 == Point2
         if self == other:
             # y coordinate == 0
             if self.y == 0 * self.x:
